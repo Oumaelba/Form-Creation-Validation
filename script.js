@@ -17,22 +17,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		if(username.length < 3){
 			isValid = false;
-			messages.push = "Username must have more than 3 characters";
+			messages.push("Username must have more than 3 characters");
 		}
-		if(!email.include("@") || !email.include(".")){
+		if(!email.includes("@") || !email.includes(".")){
 			isValid = false;
-			messages.push = "Email must include @ and .";
+			messages.push("Email must include @ and .");
 		}
 		if(password.length < 8){
 			isValid = false;
-			messages.push = "Password must be at least 8 characters"
+			messages.push("Password must be at least 8 characters");
 		}
 		feedbackDiv.style.display = "block";
 		if(isValid){
 			feedbackDiv.textContent("Registration successful!");
 			feedbackDiv.style.color = "#28a745";
+			feedbackDiv.innerHTML = "";
 		}else {
-			feedbackDiv.innerHTML = messages.join(br);
+			feedbackDiv.innerHTML = messages.join("<br>");
 			feedbackDiv.style.color = "#dc3545";
 		}
 	})
