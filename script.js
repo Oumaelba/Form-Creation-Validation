@@ -21,16 +21,19 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 		if(!email.include("@") || !email.include(".")){
 			isValid = false;
-			messages.puch = "Email must include @ and .";
+			messages.push = "Email must include @ and .";
 		}
 		if(password.length < 8){
 			isValid = false;
 			messages.push = "Password must be at least 8 characters"
 		}
-		if(isValid == true){
+		feedbackDiv.style.display = "block";
+		if(isValid){
 			feedbackDiv.textContent("Registration successful!");
-		}else if (isValid == false){
-
+			feedbackDiv.style.color = "#28a745";
+		}else {
+			feedbackDiv.innerHTML = messages.join(br);
+			feedbackDiv.style.color = "#dc3545";
 		}
 	})
 })
