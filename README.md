@@ -33,12 +33,3 @@ Fill out the form fields and click submit. The form will validate the inputs, an
 - Age validation to ensure age is between 18 and 99
 - Message length validation for word and character counts
 
-## Contributing
-Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
-
-## License
-This project is licensed under the MIT License.
-
----
-
-&copy; 2024 Form Creation Validation. All rights reserved.
