@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function() {
 	const form= document.getElementById("registration-form");
 	const feedbackDiv = document.getElementById("form-feedback");
 
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		if(isValid == true){
 			feedbackDiv.textContent("Registration successful!");
 		}else if (isValid == false){
-			
+
 		}
 	})
 })
